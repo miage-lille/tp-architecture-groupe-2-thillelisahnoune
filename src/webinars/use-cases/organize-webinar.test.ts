@@ -1,3 +1,4 @@
+//Tests pour valider ce cas d'utilisation (Organiser un webinair)
 import { FixedDateGenerator } from 'src/core/adapters/fixed-date-generator';
 import { FixedIdGenerator } from 'src/core/adapters/fixed-id-generator';
 import { IDateGenerator } from 'src/core/ports/date-generator.interface';

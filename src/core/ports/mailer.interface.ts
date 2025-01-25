@@ -1,3 +1,4 @@
+//Interface pour envoyer des emails.
 export type Email = {
   to: string;
   subject: string;

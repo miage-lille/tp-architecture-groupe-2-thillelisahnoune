@@ -1,3 +1,4 @@
+//Définit comment interagir avec les utilisateurs.
 import { Participation } from 'src/webinars/entities/participation.entity';
 
 export interface IParticipationRepository {

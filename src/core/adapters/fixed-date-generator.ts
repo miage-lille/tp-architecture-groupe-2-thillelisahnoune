@@ -1,3 +1,4 @@
+//Générer des dates pour les tests
 import { IDateGenerator } from 'src/core/ports/date-generator.interface';
 
 export class FixedDateGenerator implements IDateGenerator {

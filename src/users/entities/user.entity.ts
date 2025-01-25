@@ -1,3 +1,4 @@
+//Définit un utilisateur (ses props)
 import { Entity } from 'src/shared/entity';
 
 type UserProps = {

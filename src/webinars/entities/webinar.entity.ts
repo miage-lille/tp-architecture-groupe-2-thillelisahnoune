@@ -1,3 +1,4 @@
+//Définit un webinaire (ses propriétés)
 import { differenceInDays } from 'date-fns';
 import { Entity } from 'src/shared/entity';
 

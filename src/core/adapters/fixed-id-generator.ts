@@ -1,3 +1,4 @@
+//Générer des dates pour la production
 import { IIdGenerator } from 'src/core/ports/id-generator.interface';
 
 export class FixedIdGenerator implements IIdGenerator {

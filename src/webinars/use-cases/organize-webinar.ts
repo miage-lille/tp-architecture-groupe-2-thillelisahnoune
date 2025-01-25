@@ -1,3 +1,4 @@
+//Contient la logique métier pour organiser un webinaire (les vérifications) 
 import { IDateGenerator } from 'src/core/ports/date-generator.interface';
 import { IIdGenerator } from 'src/core/ports/id-generator.interface';
 import { Executable } from 'src/shared/executable';

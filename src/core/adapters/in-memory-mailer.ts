@@ -1,3 +1,4 @@
+//Simulée pour l'envoi d'emails
 import { Email, IMailer } from 'src/core/ports/mailer.interface';
 
 export class InMemoryMailer implements IMailer {
