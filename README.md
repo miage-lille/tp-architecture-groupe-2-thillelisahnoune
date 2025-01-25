@@ -1,3 +1,60 @@
+# Fonctionnalité de réservation pour les webinaires
+
+## 1. Introduction 
+
+Cette partie du TP implémente la fonctionnalité permettant aux utilisateurs de réserver une place pour un webinaire. Elle inclut :
+
+- La vérification des règles métier (places disponibles, inscription existante).
+- La gestion des participations.
+- L'envoi d'un email à l'organisateur pour notifier une nouvelle inscription.
+- La mise à jour des tests unitaires pour valider cette fonctionnalité.
+
+## 2. Fonctionnalités principales
+
+### Réserver une place pour un webinaire
+- Réduit le nombre de sièges disponibles.
+- Enregistre la participation de l'utilisateur.
+- Envoie une notification par email à l'organisateur.
+
+### Règles métier vérifiées
+- Les webinaires doivent avoir des places disponibles.
+- L'utilisateur ne peut pas s'inscrire deux fois au même webinaire.
+- L'utilisateur ne peut pas s'inscrire à un webinaire inexistant.
+
+### Tests unitaires
+- Happy path (réservation réussie).
+- Cas d'erreur (plus de places disponibles, utilisateur déjà inscrit, webinaire inexistant, organisateur n'existe pas).
+
+## 3. Modifications apportées 
+
+### Ports
+
+- **`src/webinars/ports/webinar-repository.interface.ts`** : `IWebinarRepository`, définition des méthodes nécessaires pour gérer les webinaires.
+- **`src/webinars/ports/participation-repository.interface.ts`** : `IParticipationRepository`, définition des méthodes nécessaires pour gérer les participants.
+
+### Use case 
+
+- **`src/webinars/use-cases/book-seat.ts`** :
+  - Permet à un utilisateur de réserver une place dans le webinaire.
+  - Applique les règles métier : vérification des places disponibles et prévention des doubles inscriptions.
+  - Envoie une notification par e-mail à l'organisateur en cas de réservation réussie.
+
+### Tests 	
+
+- **`src/webinars/use-cases/book-seat.test.ts`** : Définit les tests pour valider la fonctionnalité de réservation de places.  
+  Les tests couvrent bien : réservation réussie, plus de places disponibles, utilisateur déjà inscrit, webinaire inexistant.
+
+### Repository 
+
+- **`src/webinars/adapters/webinar-repository.in-memory.ts`** : `InMemoryWebinarRepository`, gère les webinaires dans un tableau en mémoire.
+- **`src/webinars/adapters/participation-repository.in-memory.ts`** : `InMemoryParticipationRepository`, gère les participations dans un tableau en mémoire.
+
+## 4. Instructions pour les tests 
+
+Pour exécuter les tests, il faut lancer la commande : 
+
+npm run test ou bien npm run test:watch
+
 # TP ARCHITECTURE
 
 ## Présentation du contexte
